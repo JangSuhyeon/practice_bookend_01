@@ -20,7 +20,7 @@ public class OAuthAttributes {
     private String picture;
 
     public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
-        // Todo registrationId를 가지고 어떤 소셜 로그인인지 분기
+        // registrationId를 가지고 어떤 소셜 로그인인지 분기
         return ofGoogle(userNameAttributeName, attributes);
     }
 
@@ -35,6 +35,15 @@ public class OAuthAttributes {
     }
 
     public User toEntity() {
+        return User.builder()
+                .name(name)
+                .email(email)
+                .picture(picture)
+                .role(Role.USER)
+                .build();
+    }
+
+    public User toGuestEntity() {
         return User.builder()
                 .name(name)
                 .email(email)
