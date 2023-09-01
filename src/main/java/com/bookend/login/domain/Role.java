@@ -1,4 +1,4 @@
-package com.bookend.user.domain;
+package com.bookend.login.domain;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

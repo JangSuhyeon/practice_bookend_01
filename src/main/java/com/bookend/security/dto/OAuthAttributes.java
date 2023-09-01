@@ -1,7 +1,7 @@
 package com.bookend.security.dto;
 
-import com.bookend.user.domain.Role;
-import com.bookend.user.domain.entity.User;
+import com.bookend.login.domain.Role;
+import com.bookend.login.domain.entity.User;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -19,7 +19,8 @@ public class OAuthAttributes {
     private String email;
     private String picture;
 
-    public static OAuthAttributes of(String userNameAttributeName, Map<String, Object> attributes) {
+    public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
+        // Todo registrationId를 가지고 어떤 소셜 로그인인지 분기
         return ofGoogle(userNameAttributeName, attributes);
     }
 

@@ -1,6 +1,6 @@
 package com.bookend.security.dto;
 
-import com.bookend.user.domain.entity.User;
+import com.bookend.login.domain.entity.User;
 import lombok.Getter;
 import lombok.ToString;
 

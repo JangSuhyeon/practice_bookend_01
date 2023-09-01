@@ -1,9 +1,11 @@
-package com.bookend.user.domain.entity;
+package com.bookend.login.domain.entity;
 
-import com.bookend.user.domain.Role;
+import com.bookend.login.domain.Role;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 /**
  * 소셜 로그인 시 반환된 사용자 정보를 저장할 Entity
@@ -11,6 +13,8 @@ import lombok.Getter;
 @Getter
 @Builder
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id

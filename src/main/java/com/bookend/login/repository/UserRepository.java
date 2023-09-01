@@ -1,6 +1,6 @@
-package com.bookend.user.repository;
+package com.bookend.login.repository;
 
-import com.bookend.user.domain.entity.User;
+import com.bookend.login.domain.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
